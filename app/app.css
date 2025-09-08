@@ -1,15 +1,46 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-black text-white;
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-green-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-green-300;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-green-400 text-black;
+}
+
+/* Focus styles */
+*:focus-visible {
+  @apply outline-none ring-2 ring-green-400 ring-offset-2 ring-offset-black;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.2s ease-in-out;
 }
