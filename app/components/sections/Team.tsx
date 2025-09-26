@@ -14,9 +14,9 @@ export function Team() {
   const teamMembers = [
     {
       id: 1,
-      name: 'Alex Chen',
+      name: 'Farman Ali',
       role: 'CEO & Founder',
-      bio: 'Visionary leader with 15+ years in tech innovation and digital transformation.',
+      bio: 'As an IT professional with 6+ years of expertise in Networking (CCNA) and Cybersecurity, and 3–4 years of business development experience, I lead Darkware Systems with a focus on secure, reliable technology solutions. My background in network security, infrastructure management, and advanced protection strategies drives the company’s vision to deliver trusted and innovative IT services that align with clients’ evolving needs.',
       image: '/api/placeholder/300/300',
       social: {
         linkedin: 'https://linkedin.com/in/alexchen',
@@ -29,9 +29,9 @@ export function Team() {
     },
     {
       id: 2,
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      bio: 'Technical architect specializing in scalable systems and cloud infrastructure.',
+      name: 'Muzammal Hussain',
+      role: 'CTO & Co-Founder',
+      bio: 'As a seasoned CTO with 5 years of experience, I specialize in DevOps, Networking, Android, and Frontend Development, driving innovation and operational efficiency. I have a strong track record of building scalable, secure infrastructures and developing modern, user-centric applications. My focus is on aligning technology strategies with business objectives, leading cross-functional teams, and implementing automated solutions that deliver seamless digital experiences',
       image: '/api/placeholder/300/300',
       social: {
         linkedin: 'https://linkedin.com/in/sarahjohnson',
@@ -205,7 +205,7 @@ export function Team() {
                   <p className="text-green-400 font-semibold mb-3">
                     {member.role}
                   </p>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-400 text-sm leading-relaxed text-justify break-words max-w-[24rem] md:max-w-[26rem] mx-auto">
                     {member.bio}
                   </p>
                 </div>
