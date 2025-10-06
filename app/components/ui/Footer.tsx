@@ -54,9 +54,11 @@ export function Footer() {
               className="mb-6"
             >
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-green-400 rounded-lg flex items-center justify-center">
-                  <span className="text-black font-bold text-xl">D</span>
-                </div>
+                <img
+                  src="/images/logowithoutbg.png"
+                  alt="Darkware Systems Logo"
+                  className="w-18 h-18 object-contain"
+                />
                 <span className="text-2xl font-bold text-white">
                   Darkware Systems
                 </span>
@@ -86,7 +88,7 @@ export function Footer() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.9 }}
-                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:bg-green-400 hover:text-black transition-colors"
+                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:bg-green-700 hover:text-white transition-colors"
                     >
                       <IconComponent className="w-5 h-5" />
                     </motion.a>
@@ -116,7 +118,7 @@ export function Footer() {
                         <motion.button
                           onClick={() => handleLinkClick(link.href)}
                           whileHover={{ x: 5 }}
-                          className="text-gray-400 hover:text-green-400 transition-colors text-left"
+                          className="text-gray-400 hover:text-green-700 transition-colors text-left"
                         >
                           {link.name}
                         </motion.button>
@@ -147,12 +149,12 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-1 focus:ring-green-400 focus:outline-none transition-colors"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-green-700 focus:ring-1 focus:ring-green-700 focus:outline-none transition-colors"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-green-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-300 transition-colors"
+                className="bg-green-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
               >
                 Subscribe
               </motion.button>

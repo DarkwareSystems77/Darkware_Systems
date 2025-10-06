@@ -96,7 +96,7 @@ export function Services() {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             Our{' '}
-            <span className="text-green-400 bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent">
+            <span className="text-green-700 bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent">
               Services
             </span>
           </h2>
@@ -119,7 +119,7 @@ export function Services() {
               whileHover={{ y: -10 }}
               className="group"
             >
-              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-green-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-400/10">
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-green-700/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-700/10">
                 {/* Icon */}
                 <motion.div
                   className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
@@ -129,7 +129,7 @@ export function Services() {
                 </motion.div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-700 transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">
@@ -150,7 +150,7 @@ export function Services() {
                       viewport={{ once: true }}
                       className="flex items-center space-x-2"
                     >
-                      <div className="w-2 h-2 bg-green-400 rounded-full" />
+                      <div className="w-2 h-2 bg-green-700 rounded-full" />
                       <span className="text-sm text-gray-300">{feature}</span>
                     </motion.div>
                   ))}
@@ -158,7 +158,7 @@ export function Services() {
 
                 {/* Hover Effect */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-green-400/5 to-green-300/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-r from-green-700/5 to-green-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   initial={false}
                 />
               </div>
@@ -174,7 +174,7 @@ export function Services() {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <div className="bg-gradient-to-r from-green-400/10 to-green-300/10 border border-green-400/20 rounded-2xl p-8 md:p-12">
+          <div className="bg-gradient-to-r from-green-700/10 to-green-600/10 border border-green-700/20 rounded-2xl p-8 md:p-12">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>
@@ -185,10 +185,10 @@ export function Services() {
             <motion.button
               whileHover={{
                 scale: 1.05,
-                boxShadow: '0 0 30px rgba(34, 197, 94, 0.5)',
+                boxShadow: '0 0 20px rgba(34, 197, 94, 0.2)',
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-green-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-300 transition-colors"
+              className="bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors"
             >
               Get a Free Consultation
             </motion.button>

@@ -23,21 +23,21 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-green-400 rounded-full;
+  @apply bg-green-700 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-green-300;
+  @apply bg-green-600;
 }
 
 /* Selection styling */
 ::selection {
-  @apply bg-green-400 text-black;
+  @apply bg-green-700 text-white;
 }
 
 /* Focus styles */
 *:focus-visible {
-  @apply outline-none ring-2 ring-green-400 ring-offset-2 ring-offset-black;
+  @apply outline-none ring-2 ring-green-700 ring-offset-2 ring-offset-black;
 }
 
 /* Smooth transitions for all interactive elements */

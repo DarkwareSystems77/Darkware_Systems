@@ -126,7 +126,7 @@ export function Portfolio() {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             Our{' '}
-            <span className="text-green-400 bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent">
+            <span className="text-green-700 bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent">
               Portfolio
             </span>
           </h2>
@@ -160,14 +160,14 @@ export function Portfolio() {
                   transition={{ duration: 0.5 }}
                   className="relative"
                 >
-                  <div className="bg-gray-800/50 backdrop-blur-sm border border-green-400/20 rounded-2xl overflow-hidden">
+                  <div className="bg-gray-800/50 backdrop-blur-sm border border-green-700/20 rounded-2xl overflow-hidden">
                     <div className="grid md:grid-cols-2 gap-0">
                       {/* Project Image */}
-                      <div className="relative h-64 md:h-96 bg-gradient-to-br from-green-400/20 to-green-300/10">
+                      <div className="relative h-64 md:h-96 bg-gradient-to-br from-green-700/20 to-green-600/10">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-32 h-32 bg-green-400/20 rounded-full flex items-center justify-center">
-                            <Eye className="w-16 h-16 text-green-400" />
+                          <div className="w-32 h-32 bg-green-700/20 rounded-full flex items-center justify-center">
+                            <Eye className="w-16 h-16 text-green-700" />
                           </div>
                         </div>
                       </div>
@@ -179,7 +179,7 @@ export function Portfolio() {
                             (tech, index) => (
                               <span
                                 key={tech}
-                                className="inline-block bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full mr-2 mb-2"
+                                className="inline-block bg-green-700/10 text-green-700 text-xs px-3 py-1 rounded-full mr-2 mb-2"
                               >
                                 {tech}
                               </span>
@@ -202,7 +202,7 @@ export function Portfolio() {
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="flex items-center space-x-2 bg-green-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-300 transition-colors"
+                            className="flex items-center space-x-2 bg-green-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
                           >
                             <ExternalLink className="w-4 h-4" />
                             <span>Live Demo</span>
@@ -214,7 +214,7 @@ export function Portfolio() {
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="flex items-center space-x-2 border border-green-400/50 text-green-400 px-6 py-3 rounded-lg font-semibold hover:bg-green-400/10 transition-colors"
+                            className="flex items-center space-x-2 border border-green-700/50 text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-700/10 transition-colors"
                           >
                             <Github className="w-4 h-4" />
                             <span>Code</span>
@@ -232,7 +232,7 @@ export function Portfolio() {
               onClick={prevProject}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800/80 backdrop-blur-sm border border-green-400/20 rounded-full flex items-center justify-center text-green-400 hover:bg-green-400/10 transition-colors"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800/80 backdrop-blur-sm border border-green-700/20 rounded-full flex items-center justify-center text-green-700 hover:bg-green-700/10 transition-colors"
             >
               <ChevronLeft className="w-6 h-6" />
             </motion.button>
@@ -241,7 +241,7 @@ export function Portfolio() {
               onClick={nextProject}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800/80 backdrop-blur-sm border border-green-400/20 rounded-full flex items-center justify-center text-green-400 hover:bg-green-400/10 transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800/80 backdrop-blur-sm border border-green-700/20 rounded-full flex items-center justify-center text-green-700 hover:bg-green-700/10 transition-colors"
             >
               <ChevronRight className="w-6 h-6" />
             </motion.button>
@@ -253,7 +253,7 @@ export function Portfolio() {
                   key={index}
                   onClick={() => setCurrentProject(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentProject ? 'bg-green-400' : 'bg-gray-600'
+                    index === currentProject ? 'bg-green-700' : 'bg-gray-600'
                   }`}
                 />
               ))}
@@ -277,7 +277,7 @@ export function Portfolio() {
               whileTap={{ scale: 0.95 }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeFilter === category.id
-                  ? 'bg-green-400 text-black'
+                  ? 'bg-green-700 text-white'
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
               }`}
             >
@@ -300,13 +300,13 @@ export function Portfolio() {
                 whileHover={{ y: -10 }}
                 className="group"
               >
-                <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-green-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-400/10">
+                <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-green-700/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-700/10">
                   {/* Project Image */}
-                  <div className="relative h-48 bg-gradient-to-br from-green-400/20 to-green-300/10">
+                  <div className="relative h-48 bg-gradient-to-br from-green-700/20 to-green-600/10">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Eye className="w-8 h-8 text-green-400" />
+                      <div className="w-16 h-16 bg-green-700/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Eye className="w-8 h-8 text-green-700" />
                       </div>
                     </div>
 
@@ -317,7 +317,7 @@ export function Portfolio() {
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
-                        className="w-8 h-8 bg-green-400/20 backdrop-blur-sm rounded-full flex items-center justify-center text-green-400 hover:bg-green-400 hover:text-black transition-colors"
+                        className="w-8 h-8 bg-green-700/20 backdrop-blur-sm rounded-full flex items-center justify-center text-green-700 hover:bg-green-700 hover:text-white transition-colors"
                       >
                         <ExternalLink className="w-4 h-4" />
                       </motion.a>
@@ -326,7 +326,7 @@ export function Portfolio() {
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
-                        className="w-8 h-8 bg-green-400/20 backdrop-blur-sm rounded-full flex items-center justify-center text-green-400 hover:bg-green-400 hover:text-black transition-colors"
+                        className="w-8 h-8 bg-green-700/20 backdrop-blur-sm rounded-full flex items-center justify-center text-green-700 hover:bg-green-700 hover:text-white transition-colors"
                       >
                         <Github className="w-4 h-4" />
                       </motion.a>
@@ -339,14 +339,14 @@ export function Portfolio() {
                       {project.technologies.slice(0, 3).map(tech => (
                         <span
                           key={tech}
-                          className="inline-block bg-green-400/10 text-green-400 text-xs px-2 py-1 rounded-full mr-2 mb-2"
+                          className="inline-block bg-green-700/10 text-green-700 text-xs px-2 py-1 rounded-full mr-2 mb-2"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
 
-                    <h4 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
+                    <h4 className="text-xl font-bold text-white mb-3 group-hover:text-green-700 transition-colors">
                       {project.title}
                     </h4>
 
@@ -368,7 +368,7 @@ export function Portfolio() {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <div className="bg-gradient-to-r from-green-400/10 to-green-300/10 border border-green-400/20 rounded-2xl p-8 md:p-12">
+          <div className="bg-gradient-to-r from-green-700/10 to-green-600/10 border border-green-700/20 rounded-2xl p-8 md:p-12">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Start Your Project?
             </h3>
@@ -379,10 +379,10 @@ export function Portfolio() {
             <motion.button
               whileHover={{
                 scale: 1.05,
-                boxShadow: '0 0 30px rgba(34, 197, 94, 0.5)',
+                boxShadow: '0 0 20px rgba(34, 197, 94, 0.2)',
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-green-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-300 transition-colors"
+              className="bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors"
             >
               Start Your Project
             </motion.button>

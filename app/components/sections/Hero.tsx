@@ -3,6 +3,14 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown, ArrowRight, Sparkles } from 'lucide-react';
 import { scrollToSection } from '~/lib/utils';
 
+// Pre-generated particle positions to avoid hydration mismatch
+const particlePositions = Array.from({ length: 20 }, (_, i) => ({
+  left: ((i * 7 + 13) % 100) + ((i * 3.7) % 10), // Deterministic "random" positions
+  top: ((i * 11 + 17) % 100) + ((i * 5.3) % 10),
+  duration: 3 + ((i * 0.3) % 2),
+  delay: (i * 0.4) % 2,
+}));
+
 export function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { scrollY } = useScroll();
@@ -58,22 +66,22 @@ export function Hero() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
         {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
+        {particlePositions.map((particle, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-green-400 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${particle.left}%`,
+              top: `${particle.top}%`,
             }}
             animate={{
               y: [0, -20, 0],
               opacity: [0, 1, 0],
             }}
             transition={{
-              duration: 3 + Math.random() * 2,
+              duration: particle.duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: particle.delay,
             }}
           />
         ))}
@@ -93,7 +101,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center space-x-3 bg-gray-900/50 backdrop-blur-sm border border-green-400/20 rounded-full px-6 py-3">
             <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-            <span className="text-green-400 text-sm font-medium">
+            <span className="text-green-700 text-sm font-medium">
               Innovative Technology Solutions
             </span>
           </div>
@@ -114,7 +122,7 @@ export function Hero() {
             Darkware
           </motion.span>
           <motion.span
-            className="text-green-400 block bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent"
+            className="text-green-700 block bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 300 }}
           >
@@ -131,7 +139,7 @@ export function Hero() {
         >
           Innovative Solutions for the{' '}
           <motion.span
-            className="text-green-400 font-semibold"
+            className="text-green-700 font-semibold"
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
@@ -162,17 +170,17 @@ export function Hero() {
             onClick={handleGetStarted}
             whileHover={{
               scale: 1.05,
-              boxShadow: '0 0 30px rgba(34, 197, 94, 0.5)',
+              boxShadow: '0 0 20px rgba(34, 197, 94, 0.2)',
             }}
             whileTap={{ scale: 0.95 }}
-            className="group relative bg-green-400 text-black px-8 py-4 rounded-lg font-semibold text-lg overflow-hidden"
+            className="group relative bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg overflow-hidden"
           >
             <span className="relative z-10 flex items-center space-x-2">
               Get Started
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-300"
+              className="absolute inset-0 bg-gradient-to-r from-green-700 to-green-600"
               initial={{ x: '-100%' }}
               whileHover={{ x: '0%' }}
               transition={{ duration: 0.3 }}
@@ -182,7 +190,7 @@ export function Hero() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group border border-green-400/50 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-colors"
+            className="group border border-green-700/50 text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700/10 transition-colors"
           >
             <span className="flex items-center space-x-2">
               <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -210,7 +218,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
               className="text-center"
             >
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-green-700 mb-2">
                 {stat.number}
               </div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -230,7 +238,7 @@ export function Hero() {
           onClick={() => scrollToSection('about')}
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="text-green-400 hover:text-green-300 transition-colors"
+          className="text-green-700 hover:text-green-600 transition-colors"
         >
           <ChevronDown className="w-8 h-8" />
         </motion.button>

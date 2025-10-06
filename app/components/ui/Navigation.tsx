@@ -57,7 +57,7 @@ export function Navigation({ className = '' }: NavigationProps) {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-black/95 backdrop-blur-md border-b border-green-400/20'
+          ? 'bg-black/95 backdrop-blur-md border-b border-green-700/20'
           : 'bg-transparent'
       } ${className}`}
     >
@@ -68,9 +68,11 @@ export function Navigation({ className = '' }: NavigationProps) {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-8 h-8 bg-green-400 rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-lg">D</span>
-            </div>
+            <img
+              src="/images/logowithoutbg.png"
+              alt="Darkware Systems Logo"
+              className="w-16 h-16 object-contain"
+            />
             <span className="text-xl font-bold text-white">
               Darkware Systems
             </span>
@@ -87,8 +89,8 @@ export function Navigation({ className = '' }: NavigationProps) {
                 whileTap={{ scale: 0.95 }}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   activeSection === item.href.slice(1)
-                    ? 'text-green-400'
-                    : 'text-white hover:text-green-400'
+                    ? 'text-green-700'
+                    : 'text-white hover:text-green-700'
                 }`}
                 aria-current={
                   activeSection === item.href.slice(1) ? 'page' : undefined
@@ -98,7 +100,7 @@ export function Navigation({ className = '' }: NavigationProps) {
                 {activeSection === item.href.slice(1) && (
                   <motion.div
                     layoutId="activeIndicator"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-400"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-700"
                     initial={false}
                     transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                   />
@@ -111,7 +113,7 @@ export function Navigation({ className = '' }: NavigationProps) {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-white hover:text-green-400 transition-colors"
+            className="md:hidden p-2 text-white hover:text-green-700 transition-colors"
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
@@ -129,7 +131,7 @@ export function Navigation({ className = '' }: NavigationProps) {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-green-400/20"
+              className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-green-700/20"
               role="navigation"
               aria-label="Mobile navigation"
             >
@@ -141,8 +143,8 @@ export function Navigation({ className = '' }: NavigationProps) {
                     whileHover={{ x: 10 }}
                     className={`block w-full text-left px-4 py-3 text-sm font-medium transition-colors duration-200 ${
                       activeSection === item.href.slice(1)
-                        ? 'text-green-400 bg-green-400/10'
-                        : 'text-white hover:text-green-400 hover:bg-green-400/5'
+                        ? 'text-green-700 bg-green-700/10'
+                        : 'text-white hover:text-green-700 hover:bg-green-700/5'
                     }`}
                   >
                     {item.name}

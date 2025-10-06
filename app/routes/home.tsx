@@ -3,7 +3,7 @@ import { Section } from '../components/ui/Section';
 import { Hero } from '../components/sections/Hero';
 import { About } from '../components/sections/About';
 import { Services } from '../components/sections/Services';
-import { Portfolio } from '../components/sections/Portfolio';
+// import { Portfolio } from '../components/sections/Portfolio';
 import { Team } from '../components/sections/Team';
 import { Contact } from '../components/sections/Contact';
 import { useSmoothScroll } from '../lib/hooks/useSmoothScroll';
@@ -125,9 +125,9 @@ export default function Home() {
       </Section>
 
       {/* Portfolio Section */}
-      <Section id="portfolio">
+      {/* <Section id="portfolio">
         <Portfolio />
-      </Section>
+      </Section> */}
 
       {/* Team Section */}
       <Section id="team">

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { sendEmail } from '../../lib/emailService';
 import {
   Mail,
   Phone,
@@ -45,14 +46,26 @@ export function Contact() {
     setSubmitStatus('idle');
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Send email using the email service
+      const success = await sendEmail({
+        name: data.name,
+        email: data.email,
+        company: data.company,
+        phone: data.phone,
+        service: data.service,
+        subject: data.subject,
+        message: data.message,
+      });
 
-      console.log('Form submitted:', data);
-      setSubmitStatus('success');
-      reset();
+      if (success) {
+        console.log('Email sent successfully to khadeejaasif323@gmail.com');
+        setSubmitStatus('success');
+        reset();
+      } else {
+        throw new Error('Failed to send email');
+      }
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error('Email sending error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -182,7 +195,7 @@ export function Contact() {
                 </div>
                 <div className="flex justify-between">
                   <span>Saturday</span>
-                  <span>10:00 AM - 4:00 PM</span>
+                  <span>Closed</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Sunday</span>
@@ -363,7 +376,8 @@ export function Contact() {
                 >
                   <CheckCircle className="w-5 h-5" />
                   <span>
-                    Message sent successfully! We'll get back to you soon.
+                    Message sent successfully to khadeejaasif323@gmail.com!
+                    We'll get back to you soon.
                   </span>
                 </motion.div>
               )}
