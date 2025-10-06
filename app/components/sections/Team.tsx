@@ -1,112 +1,103 @@
 import { motion } from 'framer-motion';
-import {
-  Linkedin,
-  Twitter,
-  Github,
-  Mail,
-  Award,
-  Users,
-  Clock,
-  Target,
-} from 'lucide-react';
+import { Linkedin, Award, Users, Clock, Target } from 'lucide-react';
 
 export function Team() {
   const teamMembers = [
     {
       id: 1,
-      name: 'Alex Chen',
-      role: 'CEO & Founder',
-      bio: 'Visionary leader with 15+ years in tech innovation and digital transformation.',
+      name: 'Muzammal',
+      role: 'DevOps Engineer',
+      bio: 'Skilled DevOps Engineer with 5 years of experience in DevOps, Networking, and IT Support. Specializes in CI/CD, Terraform, Docker, Kubernetes, and cloud platforms (AWS, Azure, GCP).',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://linkedin.com/in/alexchen',
-        twitter: 'https://twitter.com/alexchen',
-        github: 'https://github.com/alexchen',
-        email: 'alex@darkwaresystems.com',
+        linkedin: 'https://linkedin.com/in/muzammal',
+        twitter: 'https://twitter.com/muzammal',
+        github: 'https://github.com/muzammal',
+        email: 'muzammal@darkwaresystems.com',
       },
-      skills: ['Leadership', 'Strategy', 'Innovation'],
-      achievements: 'Forbes 30 Under 30',
+      skills: ['CI/CD', 'Terraform', 'Docker', 'Kubernetes', 'AWS'],
+      achievements: '5+ Years Experience',
     },
     {
       id: 2,
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      bio: 'Technical architect specializing in scalable systems and cloud infrastructure.',
+      name: 'Muhammad Sajid',
+      role: 'Software Engineer',
+      bio: 'Software engineer with 5 years of experience in MERN stack and .NET development. Skilled in Azure DevOps, building secure, scalable web apps and cloud solutions.',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://linkedin.com/in/sarahjohnson',
-        twitter: 'https://twitter.com/sarahjohnson',
-        github: 'https://github.com/sarahjohnson',
-        email: 'sarah@darkwaresystems.com',
+        linkedin: 'https://linkedin.com/in/muhammadsajid',
+        twitter: 'https://twitter.com/muhammadsajid',
+        github: 'https://github.com/muhammadsajid',
+        email: 'sajid@darkwaresystems.com',
       },
-      skills: ['Cloud Architecture', 'DevOps', 'Security'],
-      achievements: 'AWS Certified Solutions Architect',
+      skills: ['MERN Stack', '.NET', 'Azure DevOps', 'CI/CD'],
+      achievements: '5+ Years Experience',
     },
     {
       id: 3,
-      name: 'Michael Rodriguez',
-      role: 'Lead Developer',
-      bio: 'Full-stack developer passionate about creating exceptional user experiences.',
+      name: 'Farman Ali',
+      role: 'IT Professional & Business Development',
+      bio: 'Experienced IT professional with 6+ years in Networking (CCNA) and Cybersecurity, plus 3–4 years in Business Development. Combines technical expertise and strategic insight.',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://linkedin.com/in/michaelrodriguez',
-        twitter: 'https://twitter.com/michaelrodriguez',
-        github: 'https://github.com/michaelrodriguez',
-        email: 'michael@darkwaresystems.com',
+        linkedin: 'https://linkedin.com/in/farmanali',
+        twitter: 'https://twitter.com/farmanali',
+        github: 'https://github.com/farmanali',
+        email: 'farman@darkwaresystems.com',
       },
-      skills: ['React', 'Node.js', 'TypeScript'],
-      achievements: 'Open Source Contributor',
+      skills: ['Networking', 'CCNA', 'Cybersecurity', 'Business Development'],
+      achievements: 'CCNA Certified',
     },
     {
       id: 4,
-      name: 'Emily Watson',
-      role: 'Security Specialist',
-      bio: 'Cybersecurity expert focused on protecting digital assets and ensuring compliance.',
+      name: 'Khadeeja',
+      role: 'MERN Stack Developer',
+      bio: 'Skilled MERN Stack Developer with 5 years of experience building dynamic, scalable, and user-focused web applications. Creates seamless front-end experiences and robust back-end systems.',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://linkedin.com/in/emilywatson',
-        twitter: 'https://twitter.com/emilywatson',
-        github: 'https://github.com/emilywatson',
-        email: 'emily@darkwaresystems.com',
+        linkedin: 'https://linkedin.com/in/khadeeja',
+        twitter: 'https://twitter.com/khadeeja',
+        github: 'https://github.com/khadeeja',
+        email: 'khadeeja@darkwaresystems.com',
       },
-      skills: ['Penetration Testing', 'Compliance', 'Risk Assessment'],
-      achievements: 'CISSP Certified',
+      skills: ['React', 'Node.js', 'Express', 'MongoDB', 'MERN Stack'],
+      achievements: '5+ Years Experience',
     },
     {
       id: 5,
-      name: 'David Kim',
-      role: 'AI/ML Engineer',
-      bio: 'Machine learning specialist developing intelligent solutions for complex problems.',
+      name: 'Maryam Ali',
+      role: 'Full Stack Python Developer',
+      bio: 'Full Stack Python Developer with 4 years of experience in building scalable, user-friendly web applications. Skilled in Python, Django, Flask, React, and Angular.',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://linkedin.com/in/davidkim',
-        twitter: 'https://twitter.com/davidkim',
-        github: 'https://github.com/davidkim',
-        email: 'david@darkwaresystems.com',
+        linkedin: 'https://linkedin.com/in/maryamali',
+        twitter: 'https://twitter.com/maryamali',
+        github: 'https://github.com/maryamali',
+        email: 'maryam@darkwaresystems.com',
       },
-      skills: ['Python', 'TensorFlow', 'Data Science'],
-      achievements: 'Published Researcher',
+      skills: ['Python', 'Django', 'Flask', 'React', 'Angular'],
+      achievements: '4+ Years Experience',
     },
     {
       id: 6,
-      name: 'Lisa Thompson',
-      role: 'UX/UI Designer',
-      bio: 'Creative designer crafting intuitive and beautiful digital experiences.',
+      name: 'Coming Soon',
+      role: 'Team Member',
+      bio: 'We are excited to welcome our next team member. Details coming soon.',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://linkedin.com/in/lisathompson',
-        twitter: 'https://twitter.com/lisathompson',
-        github: 'https://github.com/lisathompson',
-        email: 'lisa@darkwaresystems.com',
+        linkedin: '#',
+        twitter: '#',
+        github: '#',
+        email: 'info@darkwaresystems.com',
       },
-      skills: ['Figma', 'User Research', 'Prototyping'],
-      achievements: 'Design Award Winner',
+      skills: ['TBA'],
+      achievements: 'Details Pending',
     },
   ];
 
   const stats = [
-    { icon: Users, value: '25+', label: 'Team Members' },
-    { icon: Award, value: '50+', label: 'Certifications' },
+    { icon: Users, value: '6', label: 'Team Members' },
+    { icon: Award, value: '10+', label: 'Certifications' },
     { icon: Clock, value: '5+', label: 'Years Experience' },
     { icon: Target, value: '100%', label: 'Client Satisfaction' },
   ];
@@ -124,7 +115,7 @@ export function Team() {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             Meet Our{' '}
-            <span className="text-green-400 bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent">
+            <span className="text-green-700 bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent">
               Team
             </span>
           </h2>
@@ -152,10 +143,10 @@ export function Team() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-green-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-green-400" />
+              <div className="w-16 h-16 bg-green-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <stat.icon className="w-8 h-8 text-green-700" />
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-green-700 mb-2">
                 {stat.value}
               </div>
               <div className="text-gray-300 text-sm font-medium">
@@ -177,12 +168,12 @@ export function Team() {
               whileHover={{ y: -10 }}
               className="group"
             >
-              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-green-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-400/10">
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-green-700/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-700/10">
                 {/* Profile Image */}
                 <div className="relative mb-6">
-                  <div className="w-24 h-24 bg-gradient-to-br from-green-400/20 to-green-300/10 rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-20 h-20 bg-green-400/30 rounded-full flex items-center justify-center">
-                      <span className="text-2xl font-bold text-green-400">
+                  <div className="w-24 h-24 bg-gradient-to-br from-green-700/20 to-green-600/10 rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-20 h-20 bg-green-700/30 rounded-full flex items-center justify-center">
+                      <span className="text-2xl font-bold text-green-700">
                         {member.name
                           .split(' ')
                           .map(n => n[0])
@@ -192,20 +183,20 @@ export function Team() {
                   </div>
 
                   {/* Achievement Badge */}
-                  <div className="absolute -top-2 -right-2 bg-green-400 text-black text-xs px-2 py-1 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute -top-2 -right-2 bg-green-700 text-white text-xs px-2 py-1 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
                     {member.achievements}
                   </div>
                 </div>
 
                 {/* Member Info */}
                 <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-700 transition-colors">
                     {member.name}
                   </h3>
-                  <p className="text-green-400 font-semibold mb-3">
+                  <p className="text-green-700 font-semibold mb-3">
                     {member.role}
                   </p>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-400 text-sm leading-relaxed text-justify">
                     {member.bio}
                   </p>
                 </div>
@@ -216,7 +207,7 @@ export function Team() {
                     {member.skills.map(skill => (
                       <span
                         key={skill}
-                        className="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full"
+                        className="bg-green-700/10 text-green-700 text-xs px-3 py-1 rounded-full"
                       >
                         {skill}
                       </span>
@@ -225,47 +216,16 @@ export function Team() {
                 </div>
 
                 {/* Social Links */}
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center">
                   <motion.a
                     href={member.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.2, y: -2 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 bg-gray-700/50 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-400/20 hover:text-green-400 transition-colors"
+                    className="w-10 h-10 bg-gray-700/50 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-700/20 hover:text-green-700 transition-colors"
                   >
                     <Linkedin className="w-5 h-5" />
-                  </motion.a>
-
-                  <motion.a
-                    href={member.social.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.2, y: -2 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 bg-gray-700/50 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-400/20 hover:text-green-400 transition-colors"
-                  >
-                    <Twitter className="w-5 h-5" />
-                  </motion.a>
-
-                  <motion.a
-                    href={member.social.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.2, y: -2 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 bg-gray-700/50 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-400/20 hover:text-green-400 transition-colors"
-                  >
-                    <Github className="w-5 h-5" />
-                  </motion.a>
-
-                  <motion.a
-                    href={`mailto:${member.social.email}`}
-                    whileHover={{ scale: 1.2, y: -2 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 bg-gray-700/50 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-400/20 hover:text-green-400 transition-colors"
-                  >
-                    <Mail className="w-5 h-5" />
                   </motion.a>
                 </div>
               </div>
@@ -281,7 +241,7 @@ export function Team() {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <div className="bg-gradient-to-r from-green-400/10 to-green-300/10 border border-green-400/20 rounded-2xl p-8 md:p-12">
+          <div className="bg-gradient-to-r from-green-700/10 to-green-600/10 border border-green-700/20 rounded-2xl p-8 md:p-12">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Join Our Team
             </h3>
@@ -294,17 +254,17 @@ export function Team() {
               <motion.button
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: '0 0 30px rgba(34, 197, 94, 0.5)',
+                  boxShadow: '0 0 20px rgba(34, 197, 94, 0.2)',
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-green-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-300 transition-colors"
+                className="bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors"
               >
                 View Open Positions
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-green-400/50 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-colors"
+                className="border border-green-700/50 text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700/10 transition-colors"
               >
                 Send Your Resume
               </motion.button>

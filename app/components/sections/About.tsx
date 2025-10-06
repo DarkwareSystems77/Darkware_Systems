@@ -42,7 +42,7 @@ export function About() {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             About{' '}
-            <span className="text-green-400 bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent">
+            <span className="text-green-700 bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent">
               Darkware Systems
             </span>
           </h2>
@@ -62,8 +62,8 @@ export function About() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className="bg-gray-800/50 backdrop-blur-sm border border-green-400/20 rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-green-400 mb-6 text-center">
+          <div className="bg-gray-800/50 backdrop-blur-sm border border-green-700/20 rounded-2xl p-8 md:p-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-green-700 mb-6 text-center">
               Our Mission
             </h3>
             <p className="text-lg text-gray-300 text-center leading-relaxed max-w-4xl mx-auto">
@@ -93,15 +93,15 @@ export function About() {
               whileHover={{ y: -10, scale: 1.05 }}
               className="group text-center"
             >
-              <div className="bg-gray-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 h-full hover:border-green-400/40 transition-all duration-300">
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-green-700/20 rounded-xl p-6 h-full hover:border-green-700/40 transition-all duration-300">
                 <motion.div
-                  className="w-16 h-16 bg-green-400/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-400/20 transition-colors"
+                  className="w-16 h-16 bg-green-700/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-700/20 transition-colors"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <value.icon className="w-8 h-8 text-green-400" />
+                  <value.icon className="w-8 h-8 text-green-700" />
                 </motion.div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-700 transition-colors">
                   {value.title}
                 </h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
@@ -120,11 +120,10 @@ export function About() {
           viewport={{ once: true }}
           className="mt-20"
         >
-          <div className="bg-gradient-to-r from-green-400/10 to-green-300/10 border border-green-400/20 rounded-2xl p-8 md:p-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="bg-gradient-to-r from-green-700/10 to-green-600/10 border border-green-700/20 rounded-2xl p-8 md:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 { number: '5+', label: 'Years Experience' },
-                { number: '50+', label: 'Happy Clients' },
                 { number: '100+', label: 'Projects Delivered' },
                 { number: '99%', label: 'Success Rate' },
               ].map((stat, index) => (
@@ -136,7 +135,7 @@ export function About() {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
+                  <div className="text-3xl md:text-4xl font-bold text-green-700 mb-2">
                     {stat.number}
                   </div>
                   <div className="text-gray-300 text-sm font-medium">
