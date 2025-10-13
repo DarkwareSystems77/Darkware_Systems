@@ -1,5 +1,14 @@
 import { motion } from 'framer-motion';
-import { Linkedin, Award, Users, Clock, Target } from 'lucide-react';
+import {
+  Linkedin,
+  Award,
+  Users,
+  Clock,
+  Target,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export function Team() {
   const teamMembers = [
@@ -10,12 +19,9 @@ export function Team() {
       bio: 'As an IT professional with 6+ years of expertise in Networking (CCNA) and Cybersecurity, and 3–4 years of business development experience, I lead Darkware Systems with a focus on secure, reliable technology solutions. My background in network security, infrastructure management, and advanced protection strategies drives the company’s vision to deliver trusted and innovative IT services that align with clients’ evolving needs.',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://linkedin.com/in/muzammal',
-        twitter: 'https://twitter.com/muzammal',
-        github: 'https://github.com/muzammal',
-        email: 'muzammal@darkwaresystems.com',
+        linkedin: 'https://www.linkedin.com/in/muzammal831',
       },
-      skills: ['CI/CD', 'Terraform', 'Docker', 'Kubernetes', 'AWS'],
+      skills: ['CI/CD', 'Terraform', 'Docker', 'Kubernetes'],
       achievements: '5+ Years Experience',
     },
     {
@@ -25,10 +31,7 @@ export function Team() {
       bio: 'As a seasoned CTO with 5 years of experience, I specialize in DevOps, Networking, Android, and Frontend Development, driving innovation and operational efficiency. I have a strong track record of building scalable, secure infrastructures and developing modern, user-centric applications. My focus is on aligning technology strategies with business objectives, leading cross-functional teams, and implementing automated solutions that deliver seamless digital experiences',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://linkedin.com/in/muhammadsajid',
-        twitter: 'https://twitter.com/muhammadsajid',
-        github: 'https://github.com/muhammadsajid',
-        email: 'sajid@darkwaresystems.com',
+        linkedin: 'https://www.linkedin.com/in/muhammadsajid906',
       },
       skills: ['MERN Stack', '.NET', 'Azure DevOps', 'CI/CD'],
       achievements: '5+ Years Experience',
@@ -36,64 +39,86 @@ export function Team() {
     {
       id: 3,
       name: 'Farman Ali',
-      role: 'IT Professional & Business Development',
-      bio: 'Experienced IT professional with 6+ years in Networking (CCNA) and Cybersecurity, plus 3–4 years in Business Development. Combines technical expertise and strategic insight.',
+      role: 'Chief Executive Officer',
+      bio: 'Chief Executive Officer with 6+ years of expertise in Networking and Cybersecurity. Leads strategic business development and technical innovation. Drives company vision and fosters a culture of excellence and growth. Committed to building lasting partnerships and delivering exceptional value to clients.',
       image: '/api/placeholder/300/300',
       social: {
         linkedin: 'https://linkedin.com/in/farmanali',
-        twitter: 'https://twitter.com/farmanali',
-        github: 'https://github.com/farmanali',
-        email: 'farman@darkwaresystems.com',
       },
-      skills: ['Networking', 'CCNA', 'Cybersecurity', 'Business Development'],
+      skills: ['Networking', 'CCNA', 'Cybersecurity', 'Business Dev'],
       achievements: 'CCNA Certified',
     },
     {
       id: 4,
-      name: 'Khadeeja',
-      role: 'MERN Stack Developer',
-      bio: 'Skilled MERN Stack Developer with 5 years of experience building dynamic, scalable, and user-focused web applications. Creates seamless front-end experiences and robust back-end systems.',
+      name: 'Qamar Iqbal',
+      role: 'Chief Operating Officer',
+      bio: 'Chief Operating Officer at Darkware Systems, driving systemic thinking and strategic leadership. Leveraging over a decade of expertise in systems design. Focuses on operational excellence and sustainable business growth. Expert in process optimization and team development strategies.',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://linkedin.com/in/khadeeja',
-        twitter: 'https://twitter.com/khadeeja',
-        github: 'https://github.com/khadeeja',
-        email: 'khadeeja@darkwaresystems.com',
+        linkedin: 'https://www.linkedin.com/in/qamariqbal111',
       },
-      skills: ['React', 'Node.js', 'Express', 'MongoDB', 'MERN Stack'],
-      achievements: '5+ Years Experience',
+      skills: [
+        'Strategic Leadership',
+        'Business Development',
+        'Systems Design',
+        'Operations',
+      ],
+      achievements: '10+ Years Experience',
     },
     {
       id: 5,
       name: 'Maryam Ali',
       role: 'Full Stack Python Developer',
-      bio: 'Full Stack Python Developer with 4 years of experience in building scalable, user-friendly web applications. Skilled in Python, Django, Flask, React, and Angular.',
+      bio: 'Experienced Full Stack Python Developer with 4 years of expertise in designing web applications. Specializes in Python, Django, Flask, React, and Angular. Enjoys solving complex problems and creating efficient, maintainable code solutions. Dedicated to continuous learning and staying updated with latest industry trends.',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://linkedin.com/in/maryamali',
-        twitter: 'https://twitter.com/maryamali',
-        github: 'https://github.com/maryamali',
-        email: 'maryam@darkwaresystems.com',
+        linkedin: 'https://www.linkedin.com/in/maryamali-softwarengineer/',
       },
       skills: ['Python', 'Django', 'Flask', 'React', 'Angular'],
       achievements: '4+ Years Experience',
     },
     {
       id: 6,
-      name: 'Coming Soon',
-      role: 'Team Member',
-      bio: 'We are excited to welcome our next team member. Details coming soon.',
+      name: 'Khadeeja Asif',
+      role: 'MERN Stack Developer',
+      bio: 'Dedicated MERN Stack Developer with 5 years of hands-on experience delivering dynamic web applications. Excels in React, Node.js, and MongoDB. Passionate about creating seamless user experiences and robust backend systems. Focuses on writing clean, scalable code and implementing modern development practices.',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#',
-        email: 'info@darkwaresystems.com',
+        linkedin: 'https://www.linkedin.com/in/khadeejah-asif/',
       },
-      skills: ['TBA'],
-      achievements: 'Details Pending',
+      skills: ['React', 'Node.js', 'Express', 'MongoDB'],
+      achievements: '5+ Years Experience',
     },
   ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(1); // Default to 1 for mobile
+  const totalSlides = Math.ceil(teamMembers.length / cardsPerView);
+
+  // Handle responsive cards per view
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      if (window.innerWidth < 768) {
+        setCardsPerView(1); // 1 card on mobile
+      } else {
+        setCardsPerView(2); // 2 cards on tablet and desktop
+      }
+    };
+
+    // Set initial value
+    updateCardsPerView();
+
+    // Add event listener
+    window.addEventListener('resize', updateCardsPerView);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', updateCardsPerView);
+  }, []);
+
+  // Reset current slide when cardsPerView changes
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, [cardsPerView]);
 
   const stats = [
     { icon: Users, value: '6', label: 'Team Members' },
@@ -156,37 +181,109 @@ export function Team() {
           ))}
         </motion.div>
 
-        {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={member.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="group"
+        {/* Team Slider */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="relative"
+        >
+          {/* Navigation Arrows */}
+          <div className="flex justify-between items-center mb-8">
+            <motion.button
+              onClick={() =>
+                setCurrentSlide(prev =>
+                  prev === 0 ? totalSlides - 1 : prev - 1
+                )
+              }
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 bg-green-700/20 text-green-700 hover:bg-green-700/30 hover:text-green-600"
             >
-              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-green-700/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-700/10">
-                {/* Profile Image */}
-                <div className="relative mb-6">
-                  <div className="w-24 h-24 bg-gradient-to-br from-green-700/20 to-green-600/10 rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-20 h-20 bg-green-700/30 rounded-full flex items-center justify-center">
-                      <span className="text-2xl font-bold text-green-700">
-                        {member.name
-                          .split(' ')
-                          .map(n => n[0])
-                          .join('')}
-                      </span>
-                    </div>
-                  </div>
+              <ChevronLeft className="w-6 h-6" />
+            </motion.button>
 
-                  {/* Achievement Badge */}
-                  <div className="absolute -top-2 -right-2 bg-green-700 text-white text-xs px-2 py-1 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-                    {member.achievements}
-                  </div>
-                </div>
+            {/* Slide Indicators */}
+            <div className="flex space-x-2">
+              {Array.from({ length: totalSlides }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    currentSlide === index
+                      ? 'bg-green-700 scale-125'
+                      : 'bg-gray-600 hover:bg-gray-500'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <motion.button
+              onClick={() =>
+                setCurrentSlide(prev =>
+                  prev === totalSlides - 1 ? 0 : prev + 1
+                )
+              }
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 bg-green-700/20 text-green-700 hover:bg-green-700/30 hover:text-green-600"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </motion.button>
+          </div>
+
+          {/* Slider Container */}
+          <div className="overflow-hidden">
+            <motion.div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{
+                transform: `translateX(-${currentSlide * 100}%)`,
+              }}
+            >
+              {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+                <div key={slideIndex} className="w-full flex-shrink-0 flex">
+                  {teamMembers
+                    .slice(
+                      slideIndex * cardsPerView,
+                      (slideIndex + 1) * cardsPerView
+                    )
+                    .map((member, memberIndex) => (
+                      <div
+                        key={member.id}
+                        className="w-full flex-shrink-0 px-4"
+                        style={{ width: `${100 / cardsPerView}%` }}
+                      >
+                        <motion.div
+                          initial={{ opacity: 0, y: 50 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{
+                            duration: 0.6,
+                            delay: memberIndex * 0.1,
+                          }}
+                          viewport={{ once: true }}
+                          whileHover={{ y: -10 }}
+                          className="group"
+                        >
+                          <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 min-h-[480px] flex flex-col justify-between hover:border-green-700/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-700/10">
+                            {/* Profile Image */}
+                            <div className="relative mb-6">
+                              <div className="w-24 h-24 bg-gradient-to-br from-green-700/20 to-green-600/10 rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <div className="w-20 h-20 bg-green-700/30 rounded-full flex items-center justify-center">
+                                  <span className="text-2xl font-bold text-green-700">
+                                    {member.name
+                                      .split(' ')
+                                      .map(n => n[0])
+                                      .join('')}
+                                  </span>
+                                </div>
+                              </div>
+
+                              {/* Achievement Badge */}
+                              <div className="absolute -top-2 -right-2 bg-green-700 text-white text-xs px-2 py-1 rounded-full font-semibold">
+                                {member.achievements}
+                              </div>
+                            </div>
 
                 {/* Member Info */}
                 <div className="text-center mb-6">
@@ -201,37 +298,42 @@ export function Team() {
                   </p>
                 </div>
 
-                {/* Skills */}
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {member.skills.map(skill => (
-                      <span
-                        key={skill}
-                        className="bg-green-700/10 text-green-700 text-xs px-3 py-1 rounded-full"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                            {/* Skills */}
+                            <div className="mb-4">
+                              <div className="flex flex-wrap gap-2 justify-center w-full">
+                                {member.skills.map(skill => (
+                                  <span
+                                    key={skill}
+                                    className="bg-green-700/10 text-green-700 text-xs px-3 py-1 rounded-full"
+                                  >
+                                    {skill}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
 
-                {/* Social Links */}
-                <div className="flex justify-center">
-                  <motion.a
-                    href={member.social.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.2, y: -2 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 bg-gray-700/50 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-700/20 hover:text-green-700 transition-colors"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </motion.a>
+                            {/* Social Links */}
+                            <div className="flex justify-center">
+                              <motion.a
+                                href={member.social.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.2, y: -2 }}
+                                whileTap={{ scale: 0.9 }}
+                                className="w-10 h-10 bg-gray-700/50 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-700/20 hover:text-green-700 transition-colors"
+                              >
+                                <Linkedin className="w-5 h-5" />
+                              </motion.a>
+                            </div>
+                          </div>
+                        </motion.div>
+                      </div>
+                    ))}
                 </div>
-              </div>
+              ))}
             </motion.div>
-          ))}
-        </div>
+          </div>
+        </motion.div>
 
         {/* Join Our Team CTA */}
         <motion.div

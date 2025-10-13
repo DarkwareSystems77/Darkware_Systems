@@ -101,7 +101,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center space-x-3 bg-gray-900/50 backdrop-blur-sm border border-green-400/20 rounded-full px-6 py-3">
             <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-            <span className="text-green-700 text-sm font-medium">
+            <span className="text-green-700 text-medium font-bold">
               Innovative Technology Solutions
             </span>
           </div>
