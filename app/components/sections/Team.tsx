@@ -93,7 +93,7 @@ export function Team() {
       id: 7,
       name: 'Mehar Muskan',
       role: 'UI/UX Designer & Graphic Designer',
-      bio: 'Passionate and results-driven UI/UX Designer with 4 years of experience creating visually engaging, user-focused web and mobile solutions. Known for blending creativity with strategy, she designs digital experiences that not only look beautiful but also drive performance and business growth. Skilled in UX research, prototyping, and visual design, with strong proficiency in graphic design tools — delivering complete brand consistency across every platform.',
+      bio: 'Passionate and results-driven UI/UX Designer with 4 years of experience creating visually engaging, user-focused web and mobile solutions. Known for blending creativity with strategy, she designs digital experiences that not only look beautiful but also drive performance and business growth. Skilled in UX research, prototyping, and visual design, with strong proficiency in graphic design tools delivering complete brand consistency across every platform.',
       image: '/api/placeholder/300/300',
       social: {
         linkedin: 'https://www.linkedin.com/in/mehar-muskan',
