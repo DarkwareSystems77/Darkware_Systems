@@ -65,6 +65,9 @@ export function Hero() {
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
+        {/* Vignette Effect - Darker sides, lighter center */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
+
         {/* Floating Particles */}
         {particlePositions.map((particle, i) => (
           <motion.div
@@ -90,7 +93,7 @@ export function Hero() {
       {/* Main Content */}
       <motion.div
         style={{ y, opacity }}
-        className="relative z-10 text-center px-4 max-w-6xl mx-auto"
+        className="relative z-10 text-center px-4 w-full"
       >
         {/* Company Logo/Badge */}
         <motion.div
