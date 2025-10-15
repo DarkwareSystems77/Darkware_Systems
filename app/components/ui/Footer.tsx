@@ -14,10 +14,10 @@ export function Footer() {
       { name: 'Contact', href: '#contact' },
     ],
     services: [
-      { name: 'Software Development', href: '#services' },
+      { name: 'Full-Stack Development', href: '#services' },
       { name: 'Cybersecurity', href: '#services' },
-      { name: 'Digital Transformation', href: '#services' },
-      { name: 'Cloud Services', href: '#services' },
+      { name: 'DevOps & Cloud Infrastructure', href: '#services' },
+      { name: 'UI/UX Design', href: '#services' },
     ],
     resources: [
       { name: 'Blog', href: '#' },

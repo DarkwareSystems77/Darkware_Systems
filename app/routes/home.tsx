@@ -115,7 +115,7 @@ export default function Home() {
       </Section>
 
       {/* About Section */}
-      <Section id="about ">
+      <Section id="about">
         <About />
       </Section>
 

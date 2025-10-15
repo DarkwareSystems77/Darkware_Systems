@@ -1,18 +1,27 @@
 import { motion } from 'framer-motion';
-import { Code, Shield, Zap, Database, Cloud, Smartphone } from 'lucide-react';
+import {
+  Code,
+  Shield,
+  Zap,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Settings,
+} from 'lucide-react';
 
 export function Services() {
   const services = [
     {
       icon: Code,
-      title: 'Software Development',
+      title: 'Full-Stack Development',
       description:
-        'Custom software solutions tailored to your business needs using modern technologies and best practices.',
+        'Custom web applications and software solutions built with MERN stack, .NET, and Python technologies.',
       features: [
-        'Web Applications',
-        'Mobile Apps',
-        'API Development',
-        'Cloud Integration',
+        'MERN Stack Applications',
+        '.NET Web Development',
+        'Python Django/Flask',
+        'React & Angular Frontend',
       ],
       color: 'from-blue-500 to-cyan-500',
     },
@@ -20,57 +29,57 @@ export function Services() {
       icon: Shield,
       title: 'Cybersecurity',
       description:
-        'Protect your digital assets with comprehensive security solutions and threat monitoring.',
+        'Comprehensive security solutions and network protection with CCNA-certified expertise.',
       features: [
+        'Network Security',
         'Security Audits',
-        'Penetration Testing',
-        'Incident Response',
-        'Compliance',
+        'Infrastructure Protection',
+        'Compliance & Standards',
       ],
       color: 'from-red-500 to-pink-500',
+    },
+    {
+      icon: Cloud,
+      title: 'DevOps & Cloud Infrastructure',
+      description:
+        'Scalable cloud solutions with CI/CD pipelines, containerization, and automated deployment.',
+      features: [
+        'CI/CD Pipelines',
+        'Docker & Kubernetes',
+        'Terraform Infrastructure',
+        'Azure DevOps',
+      ],
+      color: 'from-indigo-500 to-blue-500',
+    },
+    {
+      icon: Palette,
+      title: 'UI/UX Design',
+      description:
+        'User-centered design solutions that blend creativity with strategy for exceptional digital experiences.',
+      features: [
+        'UX Research & Analysis',
+        'Prototyping & Wireframing',
+        'Visual Design & Branding',
+        'Frontend Development',
+      ],
+      color: 'from-purple-500 to-violet-500',
     },
     {
       icon: Zap,
       title: 'Digital Transformation',
       description:
-        'Modernize your business processes and technology stack for improved efficiency.',
+        'Strategic modernization of business processes and technology infrastructure for improved efficiency.',
       features: [
-        'Process Automation',
-        'Legacy Migration',
-        'Cloud Migration',
-        'Data Analytics',
-      ],
-      color: 'from-purple-500 to-violet-500',
-    },
-    {
-      icon: Database,
-      title: 'Data Solutions',
-      description:
-        'Harness the power of your data with advanced analytics and business intelligence.',
-      features: [
-        'Data Warehousing',
-        'Business Intelligence',
-        'Machine Learning',
-        'Predictive Analytics',
+        'Legacy System Migration',
+        'Process Optimization',
+        'Technology Integration',
+        'Strategic Consulting',
       ],
       color: 'from-orange-500 to-yellow-500',
     },
     {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description:
-        'Scalable and secure cloud infrastructure solutions for your business needs.',
-      features: [
-        'Cloud Architecture',
-        'DevOps',
-        'Containerization',
-        'Monitoring',
-      ],
-      color: 'from-indigo-500 to-blue-500',
-    },
-    {
       icon: Smartphone,
-      title: 'Mobile Solutions',
+      title: 'Mobile App Development',
       description:
         'Native and cross-platform mobile applications that deliver exceptional user experiences.',
       features: [

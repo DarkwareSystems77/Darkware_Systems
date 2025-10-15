@@ -4,8 +4,8 @@ export const COMPANY_INFO = {
   description:
     'We specialize in cutting-edge software development, cybersecurity solutions, and digital transformation services.',
   email: 'contact@darkwaresystems.com',
-  phone: '+1 (555) 123-4567',
-  address: '123 Tech Street, Innovation City, IC 12345',
+  phone: '+92 42 32020809',
+  address: '34 Emma Street, Accrington, Manchester, United Kingdom',
   founded: '2024',
 } as const;
 
@@ -13,7 +13,7 @@ export const NAVIGATION_ITEMS = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Services', href: '#services' },
-  { name: 'Portfolio', href: '#portfolio' },
+  // { name: 'Portfolio', href: '#portfolio' },
   { name: 'Team', href: '#team' },
   { name: 'Contact', href: '#contact' },
 ] as const;

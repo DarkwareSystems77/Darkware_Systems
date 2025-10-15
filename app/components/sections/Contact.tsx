@@ -104,13 +104,20 @@ export function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+92 42 32020809',
+      href: 'tel:+924232020809',
     },
     {
       icon: MapPin,
-      title: 'Address',
-      value: '123 Tech Street, Innovation City, IC 12345',
+      title: 'UK Office',
+      value: '34 Emma Street, Accrington, Manchester, United Kingdom',
+      href: '#',
+    },
+    {
+      icon: MapPin,
+      title: 'Pakistan Office',
+      value:
+        '3rd Floor, CP 111, Fairways Commercial DHA Raya, Phase 6, Lahore, Pakistan',
       href: '#',
     },
     {
@@ -122,12 +129,12 @@ export function Contact() {
   ];
 
   const services = [
-    'Software Development',
+    'Full-Stack Development',
     'Cybersecurity',
+    'DevOps & Cloud Infrastructure',
+    'UI/UX Design',
     'Digital Transformation',
-    'Cloud Services',
-    'Mobile Development',
-    'AI/ML Solutions',
+    'Mobile App Development',
     'Consulting',
     'Other',
   ];
@@ -403,7 +410,7 @@ export function Contact() {
                 </label>
                 <textarea
                   {...register('message')}
-                  rows={4}
+                  rows={8}
                   className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-1 focus:ring-green-400 focus:outline-none transition-colors resize-none text-sm sm:text-base"
                   placeholder="Tell us about your project..."
                 />

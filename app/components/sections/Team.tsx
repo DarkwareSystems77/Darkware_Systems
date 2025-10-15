@@ -38,14 +38,14 @@ export function Team() {
     },
     {
       id: 3,
-      name: 'Farman Ali',
-      role: 'Chief Executive Officer',
-      bio: 'Chief Executive Officer with 6+ years of expertise in Networking and Cybersecurity. Leads strategic business development and technical innovation. Drives company vision and fosters a culture of excellence and growth. Committed to building lasting partnerships and delivering exceptional value to clients.',
+      name: 'Muhammad Sajid',
+      role: 'Software Engineer',
+      bio: 'Muhammad Sajid is a software engineer with 5 years of experience in MERN stack and .NET development. He has strong expertise in building secure, scalable web applications and cloud solutions. Proficient in Azure DevOps, he streamlines CI/CD pipelines and deployment workflows.Sajid is passionate about delivering high-performance, reliable, and future-ready applications.',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://linkedin.com/in/farmanali',
+        linkedin: 'https://linkedin.com/in/muhammadsajid906',
       },
-      skills: ['Networking', 'CCNA', 'Cybersecurity', 'Business Dev'],
+      skills: ['MERN Stack', '.NET', 'Azure DevOps', 'CI/CD'],
       achievements: 'CCNA Certified',
     },
     {
@@ -89,6 +89,59 @@ export function Team() {
       skills: ['React', 'Node.js', 'Express', 'MongoDB'],
       achievements: '5+ Years Experience',
     },
+    {
+      id: 7,
+      name: 'Mehar Muskan',
+      role: 'UI/UX Designer & Graphic Designer',
+      bio: 'Passionate and results-driven UI/UX Designer with 4 years of experience creating visually engaging, user-focused web and mobile solutions. Known for blending creativity with strategy, she designs digital experiences that not only look beautiful but also drive performance and business growth. Skilled in UX research, prototyping, and visual design, with strong proficiency in graphic design tools — delivering complete brand consistency across every platform.',
+      image: '/api/placeholder/300/300',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/mehar-muskan',
+      },
+      skills: ['UX Research', 'Prototyping', 'Visual Design', 'Brand Design'],
+      achievements: '4+ Years Experience',
+    },
+    {
+      id: 8,
+      name: 'Muneeb Ch',
+      role: 'UI/UX Designer',
+      bio: 'UI/UX Designer with 5 years of experience crafting seamless, user-focused designs and developing engaging frontend experiences. Specializes in creating intuitive interfaces that bridge the gap between design and development. Expert in user research, wireframing, and translating complex requirements into elegant, functional designs that enhance user engagement and drive business success.',
+      image: '/api/placeholder/300/300',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/themuneebch',
+      },
+      skills: [
+        'User Research',
+        'Wireframing',
+        'Frontend Development',
+        'Interface Design',
+      ],
+      achievements: '5+ Years Experience',
+    },
+    {
+      id: 9,
+      name: 'Muhammad Asif Munir',
+      role: 'Flutter Developer',
+      bio: 'Experienced Flutter Developer with 5 years of professional expertise specializing in cross-platform mobile application development. Skilled in building high-performance, visually appealing, and scalable applications for Android and iOS. Possesses deep understanding of Flutter framework, Dart, and state management solutions. Proficient in integrating with various back-end services, and delivering seamless user experience in frontend development.',
+      image: '/api/placeholder/300/300',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/muhammadasif4744',
+      },
+      skills: ['Flutter', 'Dart', 'Cross-Platform', 'State Management'],
+      achievements: '5+ Years Experience',
+    },
+    {
+      id: 10,
+      name: 'Iqra Rasheed',
+      role: 'MERN Stack Developer',
+      bio: 'MERN Stack Developer with 3 years of experience building dynamic and user-friendly web applications. Specializes in MongoDB, Express.js, React, and Node.js, creating scalable solutions with clean and efficient code. Passionate about crafting great user experiences and continuously learning new technologies to deliver innovative web solutions that meet modern business requirements.',
+      image: '/api/placeholder/300/300',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/iqra-rasheed-mern',
+      },
+      skills: ['MongoDB', 'Express.js', 'React', 'Node.js'],
+      achievements: '3+ Years Experience',
+    },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -121,7 +174,7 @@ export function Team() {
   }, [cardsPerView]);
 
   const stats = [
-    { icon: Users, value: '6', label: 'Team Members' },
+    { icon: Users, value: '10', label: 'Team Members' },
     { icon: Award, value: '10+', label: 'Certifications' },
     { icon: Clock, value: '5+', label: 'Years Experience' },
     { icon: Target, value: '100%', label: 'Client Satisfaction' },
@@ -265,7 +318,7 @@ export function Team() {
                           whileHover={{ y: -10 }}
                           className="group"
                         >
-                          <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 min-h-[480px] flex flex-col justify-between hover:border-green-700/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-700/10">
+                          <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 h-[520px] w-full flex flex-col justify-between hover:border-green-700/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-700/10">
                             {/* Profile Image */}
                             <div className="relative mb-6">
                               <div className="w-24 h-24 bg-gradient-to-br from-green-700/20 to-green-600/10 rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -285,21 +338,23 @@ export function Team() {
                               </div>
                             </div>
 
-                {/* Member Info */}
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-700 transition-colors">
-                    {member.name}
-                  </h3>
-                  <p className="text-green-700 font-semibold mb-3">
-                    {member.role}
-                  </p>
-                  <p className="text-gray-400 text-sm leading-relaxed text-justify break-words max-w-[24rem] md:max-w-[26rem] mx-auto">
-                    {member.bio}
-                  </p>
-                </div>
+                            {/* Member Info */}
+                            <div className="text-center mb-6 flex-1 flex flex-col">
+                              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-700 transition-colors">
+                                {member.name}
+                              </h3>
+                              <p className="text-green-700 font-semibold mb-3">
+                                {member.role}
+                              </p>
+                              <div className="flex-1 flex items-start">
+                                <p className="text-gray-400 text-sm leading-relaxed text-justify break-words max-w-[24rem] md:max-w-[26rem] mx-auto">
+                                  {member.bio}
+                                </p>
+                              </div>
+                            </div>
 
                             {/* Skills */}
-                            <div className="mb-4">
+                            <div className="mb-4 h-16 flex items-center">
                               <div className="flex flex-wrap gap-2 justify-center w-full">
                                 {member.skills.map(skill => (
                                   <span
