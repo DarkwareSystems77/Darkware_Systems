@@ -63,7 +63,7 @@ export function Contact() {
       });
 
       if (success) {
-        console.log('Email sent successfully to khadeejaasif323@gmail.com');
+        console.log('Email sent successfully to contact@darkwaresystems.com');
         setSubmitStatus('success');
         reset();
       } else {

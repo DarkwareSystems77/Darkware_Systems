@@ -1,5 +1,5 @@
 // Working email service using Web3Forms
-// This will actually send emails to khadeejaasif323@gmail.com
+// This will actually send emails to contact@darkwaresystems.com
 
 export interface EmailData {
   name: string;
@@ -44,12 +44,12 @@ ${data.message}
     const formData = new FormData();
 
     // Web3Forms configuration - using your actual access key
-    formData.append('access_key', '6d541799-6034-4f93-acdf-c510ae923046');
+    formData.append('access_key', '060b90e7-89f0-4d4a-a9fc-7de84bf39f89');
     formData.append('subject', `New Contact Form: ${data.subject}`);
     formData.append('from_name', data.name);
     formData.append('from_email', data.email);
     formData.append('reply_to', data.email);
-    formData.append('to', 'khadeejaasif323@gmail.com');
+    formData.append('to', 'contact@darkwaresystems.com');
 
     // Add the formatted content as the message
     formData.append('message', emailContent);
@@ -63,7 +63,7 @@ ${data.message}
     formData.append('original_subject', data.subject);
     formData.append('original_message', data.message);
 
-    console.log('📧 Sending email to khadeejaasif323@gmail.com...');
+    console.log('📧 Sending email to contact@darkwaresystems.com...');
     console.log('📧 Email content:', emailContent);
 
     const response = await fetch('https://api.web3forms.com/submit', {
@@ -74,7 +74,7 @@ ${data.message}
     const result = await response.json();
 
     if (result.success) {
-      console.log('✅ Email sent successfully to khadeejaasif323@gmail.com');
+      console.log('✅ Email sent successfully to contact@darkwaresystems.com');
       console.log('📧 Message ID:', result.messageId);
       console.log('📧 Full response:', result);
       console.log(
@@ -115,11 +115,11 @@ ${data.message}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     `.trim();
 
-    console.log('📧 FALLBACK: EMAIL TO: khadeejaasif323@gmail.com');
+    console.log('📧 FALLBACK: EMAIL TO: contact@darkwaresystems.com');
     console.log('📧 FALLBACK: EMAIL CONTENT:');
     console.log(emailContent);
     console.log(
-      '⚠️  Please copy this content and send it manually to khadeejaasif323@gmail.com'
+      '⚠️  Please copy this content and send it manually to contact@darkwaresystems.com'
     );
 
     return false;
