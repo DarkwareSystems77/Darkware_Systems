@@ -110,7 +110,9 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <Hero />
+      <Section id="home">
+        <Hero />
+      </Section>
 
       {/* About Section */}
       <Section id="about">
