@@ -7,6 +7,7 @@ import {
   Github,
   Eye,
 } from 'lucide-react';
+import { scrollToSection } from '~/lib/utils';
 
 export function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -377,6 +378,7 @@ export function Portfolio() {
               expertise and innovative solutions.
             </p>
             <motion.button
+              onClick={() => scrollToSection('contact')}
               whileHover={{
                 scale: 1.05,
                 boxShadow: '0 0 20px rgba(34, 197, 94, 0.2)',

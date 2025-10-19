@@ -9,6 +9,7 @@ import {
   Palette,
   Settings,
 } from 'lucide-react';
+import { scrollToSection } from '~/lib/utils';
 
 export function Services() {
   const services = [
@@ -192,6 +193,7 @@ export function Services() {
               transformation goals.
             </p>
             <motion.button
+              onClick={() => scrollToSection('contact')}
               whileHover={{
                 scale: 1.05,
                 boxShadow: '0 0 20px rgba(34, 197, 94, 0.2)',

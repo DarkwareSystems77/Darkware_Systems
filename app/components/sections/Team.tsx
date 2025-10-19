@@ -8,6 +8,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from 'lucide-react';
+import { scrollToSection } from '~/lib/utils';
 import { useState, useEffect } from 'react';
 
 export function Team() {
@@ -409,6 +410,7 @@ export function Team() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
+                onClick={() => scrollToSection('contact')}
                 whileHover={{
                   scale: 1.05,
                   boxShadow: '0 0 20px rgba(34, 197, 94, 0.2)',
@@ -419,6 +421,7 @@ export function Team() {
                 View Open Positions
               </motion.button>
               <motion.button
+                onClick={() => scrollToSection('contact')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-green-700/50 text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700/10 transition-colors"
