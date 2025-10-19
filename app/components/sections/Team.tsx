@@ -104,7 +104,7 @@ export function Team() {
     },
     {
       id: 8,
-      name: 'Muneeb Ch',
+      name: 'Muneeb Ur Rehman',
       role: 'UI/UX Designer',
       bio: 'UI/UX Designer with 5 years of experience crafting seamless, user-focused designs and developing engaging frontend experiences. Specializes in creating intuitive interfaces that bridge the gap between design and development. Expert in user research, wireframing, and translating complex requirements into elegant, functional designs that enhance user engagement and drive business success.',
       image: '/api/placeholder/300/300',

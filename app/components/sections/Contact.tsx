@@ -450,8 +450,8 @@ export function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   className="flex items-start sm:items-center space-x-2 text-green-400 bg-green-400/10 border border-green-400/20 rounded-lg p-3 sm:p-4"
                 >
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-0" />
-                  <span className="text-sm sm:text-base">
+                  <CheckCircle className="w-5 h-5" />
+                  <span>
                     Message sent successfully to khadeejaasif323@gmail.com!
                     We'll get back to you soon.
                   </span>
