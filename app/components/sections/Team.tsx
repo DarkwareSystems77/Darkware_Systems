@@ -48,7 +48,7 @@ export function Team() {
         linkedin: 'https://linkedin.com/in/muhammadsajid906',
       },
       skills: ['MERN Stack', '.NET', 'Azure DevOps', 'CI/CD'],
-      achievements: 'CCNA Certified',
+     achievements: '5+ Years Experience',
     },
     {
       id: 4,
