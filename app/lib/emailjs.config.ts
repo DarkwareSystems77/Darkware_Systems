@@ -13,7 +13,7 @@ export const EMAILJS_CONFIG = {
   PUBLIC_KEY: 'YOUR_PUBLIC_KEY_HERE', // Get this from your EmailJS account
 
   // Target email address
-  TARGET_EMAIL: 'khadeejaasif323@gmail.com',
+  TARGET_EMAIL: 'contact@darkwaresystems.com',
 } as const;
 
 // Email template variables that should be available in your EmailJS template:
