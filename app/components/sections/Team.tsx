@@ -20,9 +20,10 @@ export function Team() {
       bio: 'As an IT professional with 6+ years of expertise in Networking (CCNA) and Cybersecurity, and 3–4 years of business development experience, I lead Darkware Systems with a focus on secure, reliable technology solutions. My background in network security, infrastructure management, and advanced protection strategies drives the company’s vision to deliver trusted and innovative IT services that align with clients’ evolving needs.',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://www.linkedin.com/in/muzammal831',
+        linkedin: 'https://www.linkedin.com/in/farmanali4181?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       },
-      skills: ['CI/CD', 'Terraform', 'Docker', 'Kubernetes'],
+ skills: ['Cybersecurity','Networking (CCNA)', 'Business Development', 'Leadership'],
+  
       achievements: '5+ Years Experience',
     },
     {
@@ -32,9 +33,9 @@ export function Team() {
       bio: 'As a seasoned CTO with 5 years of experience, I specialize in DevOps, Networking, Android, and Frontend Development, driving innovation and operational efficiency. I have a strong track record of building scalable, secure infrastructures and developing modern, user-centric applications. My focus is on aligning technology strategies with business objectives, leading cross-functional teams, and implementing automated solutions that deliver seamless digital experiences',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://www.linkedin.com/in/muhammadsajid906',
+        linkedin: 'https://www.linkedin.com/in/muzammal831',
       },
-      skills: ['MERN Stack', '.NET', 'Azure DevOps', 'CI/CD'],
+      skills: ['CI/CD', 'Terraform', 'Docker', 'Kubernetes'],
       achievements: '5+ Years Experience',
     },
     {
