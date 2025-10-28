@@ -17,9 +17,13 @@ export function formatPhoneNumber(phone: string): string {
 export function scrollToSection(sectionId: string) {
   const element = document.getElementById(sectionId);
   if (element) {
-    element.scrollIntoView({
+    const navbarHeight = 64; // h-16 = 4rem = 64px
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+    window.scrollTo({
+      top: offsetPosition,
       behavior: 'smooth',
-      block: 'start',
     });
   }
 }

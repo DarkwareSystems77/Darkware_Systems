@@ -20,10 +20,16 @@ export function Team() {
       bio: 'As an IT professional with 6+ years of expertise in Networking (CCNA) and Cybersecurity, and 3–4 years of business development experience, I lead Darkware Systems with a focus on secure, reliable technology solutions. My background in network security, infrastructure management, and advanced protection strategies drives the company’s vision to deliver trusted and innovative IT services that align with clients’ evolving needs.',
       image: '/api/placeholder/300/300',
       social: {
-        linkedin: 'https://www.linkedin.com/in/farmanali4181?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+        linkedin:
+          'https://www.linkedin.com/in/farmanali4181?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       },
- skills: ['Cybersecurity','Networking (CCNA)', 'Business Development', 'Leadership'],
-  
+      skills: [
+        'Cybersecurity',
+        'Networking (CCNA)',
+        'Business Development',
+        'Leadership',
+      ],
+
       achievements: '5+ Years Experience',
     },
     {
@@ -48,7 +54,7 @@ export function Team() {
         linkedin: 'https://linkedin.com/in/muhammadsajid906',
       },
       skills: ['MERN Stack', '.NET', 'Azure DevOps', 'CI/CD'],
-     achievements: '5+ Years Experience',
+      achievements: '5+ Years Experience',
     },
     {
       id: 4,
@@ -183,7 +189,7 @@ export function Team() {
   ];
 
   return (
-    <section className="py-20 px-4">
+    <section id="team" className="py-20 px-4">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div
@@ -320,7 +326,7 @@ export function Team() {
                           whileHover={{ y: -10 }}
                           className="group"
                         >
-                          <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 h-[520px] w-full flex flex-col justify-between hover:border-green-700/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-700/10">
+                          <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 min-h-[520px] w-full flex flex-col hover:border-green-700/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-700/10">
                             {/* Profile Image */}
                             <div className="relative mb-6">
                               <div className="w-24 h-24 bg-gradient-to-br from-green-700/20 to-green-600/10 rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -356,7 +362,7 @@ export function Team() {
                             </div>
 
                             {/* Skills */}
-                            <div className="mb-4 h-16 flex items-center">
+                            <div className="mb-4 min-h-[3rem] flex items-center">
                               <div className="flex flex-wrap gap-2 justify-center w-full">
                                 {member.skills.map(skill => (
                                   <span

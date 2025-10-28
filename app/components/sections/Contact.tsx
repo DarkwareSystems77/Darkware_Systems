@@ -140,8 +140,11 @@ export function Contact() {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 bg-gray-900">
-      <div className="container mx-auto max-w-7xl">
+    <section
+      id="contact"
+      className="py-12 sm:py-16 lg:py-20 px-4 bg-gray-900 w-full overflow-x-hidden"
+    >
+      <div className="container mx-auto max-w-7xl w-full">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -163,7 +166,7 @@ export function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 w-full">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -195,16 +198,16 @@ export function Contact() {
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ x: 10 }}
-                  className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-colors group"
+                  className="flex items-start space-x-3 sm:space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-colors group overflow-hidden"
                 >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-400/10 rounded-lg flex items-center justify-center group-hover:bg-green-400/20 transition-colors flex-shrink-0">
                     <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
                   </div>
-                  <div className="min-w-0 flex-1">
-                    <h4 className="text-white font-semibold text-sm sm:text-base">
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-white font-semibold text-sm sm:text-base mb-1">
                       {info.title}
                     </h4>
-                    <p className="text-gray-400 text-xs sm:text-sm truncate">
+                    <p className="text-gray-400 text-xs sm:text-sm break-words">
                       {info.value}
                     </p>
                   </div>
@@ -246,7 +249,7 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8"
+            className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 w-full overflow-hidden"
           >
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">
               Send us a Message
@@ -254,41 +257,41 @@ export function Contact() {
 
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="space-y-4 sm:space-y-6"
+              className="space-y-5 w-full overflow-hidden"
             >
               {/* Name and Email */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-1 sm:mb-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="w-full min-w-0">
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
                     Name *
                   </label>
                   <input
                     {...register('name')}
                     type="text"
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-1 focus:ring-green-400 focus:outline-none transition-colors text-sm sm:text-base"
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-2 focus:ring-green-400 focus:outline-none transition-all text-sm box-border"
                     placeholder="Your name"
                   />
                   {errors.name && (
-                    <p className="mt-1 text-xs sm:text-sm text-red-400 flex items-center">
-                      <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                    <p className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+                      <AlertCircle className="w-4 h-4" />
                       {errors.name.message}
                     </p>
                   )}
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-1 sm:mb-2">
+                <div className="w-full min-w-0">
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
                     Email *
                   </label>
                   <input
                     {...register('email')}
                     type="email"
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-1 focus:ring-green-400 focus:outline-none transition-colors text-sm sm:text-base"
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-2 focus:ring-green-400 focus:outline-none transition-all text-sm box-border"
                     placeholder="your@email.com"
                   />
                   {errors.email && (
-                    <p className="mt-1 text-xs sm:text-sm text-red-400 flex items-center">
-                      <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                    <p className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+                      <AlertCircle className="w-4 h-4" />
                       {errors.email.message}
                     </p>
                   )}
@@ -296,27 +299,27 @@ export function Contact() {
               </div>
 
               {/* Company and Phone */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-1 sm:mb-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="w-full min-w-0">
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
                     Company
                   </label>
                   <input
                     {...register('company')}
                     type="text"
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-1 focus:ring-green-400 focus:outline-none transition-colors text-sm sm:text-base"
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-2 focus:ring-green-400 focus:outline-none transition-all text-sm box-border"
                     placeholder="Your company"
                   />
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-1 sm:mb-2">
+                <div className="w-full min-w-0">
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
                     Phone
                   </label>
                   <input
                     {...register('phone')}
                     type="tel"
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-1 focus:ring-green-400 focus:outline-none transition-colors text-sm sm:text-base"
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-2 focus:ring-green-400 focus:outline-none transition-all text-sm box-border"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
@@ -324,14 +327,14 @@ export function Contact() {
 
               {/* Service Selection */}
               <div className="relative" ref={dropdownRef}>
-                <label className="block text-sm font-medium text-gray-300 mb-1 sm:mb-2">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
                   Service Interest *
                 </label>
                 <div className="relative">
                   <button
                     type="button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white focus:border-green-400 focus:ring-1 focus:ring-green-400 focus:outline-none transition-colors text-sm sm:text-base text-left flex items-center justify-between"
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white focus:border-green-400 focus:ring-2 focus:ring-green-400 focus:outline-none transition-all text-sm text-left flex items-center justify-between box-border"
                   >
                     <span
                       className={
@@ -352,7 +355,7 @@ export function Contact() {
                       exit={{ opacity: 0, y: -10 }}
                       className="absolute z-50 w-full mt-1 bg-gray-800 border border-gray-600/50 rounded-lg shadow-xl max-h-60 overflow-auto"
                     >
-                      {services.map((service, index) => (
+                      {services.map(service => (
                         <button
                           key={service}
                           type="button"
@@ -360,7 +363,7 @@ export function Contact() {
                             setValue('service', service);
                             setIsDropdownOpen(false);
                           }}
-                          className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-left text-sm sm:text-base transition-colors first:rounded-t-lg last:rounded-b-lg ${
+                          className={`w-full px-4 py-3 text-left text-sm transition-colors first:rounded-t-lg last:rounded-b-lg ${
                             watch('service') === service
                               ? 'bg-green-400/20 text-green-400'
                               : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
@@ -377,46 +380,46 @@ export function Contact() {
                 <input {...register('service')} type="hidden" />
 
                 {errors.service && (
-                  <p className="mt-1 text-xs sm:text-sm text-red-400 flex items-center">
-                    <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                  <p className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+                    <AlertCircle className="w-4 h-4" />
                     {errors.service.message}
                   </p>
                 )}
               </div>
 
               {/* Subject */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1 sm:mb-2">
+              <div className="w-full min-w-0">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
                   Subject *
                 </label>
                 <input
                   {...register('subject')}
                   type="text"
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-1 focus:ring-green-400 focus:outline-none transition-colors text-sm sm:text-base"
+                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-2 focus:ring-green-400 focus:outline-none transition-all text-sm box-border"
                   placeholder="What's this about?"
                 />
                 {errors.subject && (
-                  <p className="mt-1 text-xs sm:text-sm text-red-400 flex items-center">
-                    <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                  <p className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+                    <AlertCircle className="w-4 h-4" />
                     {errors.subject.message}
                   </p>
                 )}
               </div>
 
               {/* Message */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1 sm:mb-2">
+              <div className="w-full min-w-0">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
                 </label>
                 <textarea
                   {...register('message')}
-                  rows={8}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-1 focus:ring-green-400 focus:outline-none transition-colors resize-none text-sm sm:text-base"
+                  rows={6}
+                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:ring-2 focus:ring-green-400 focus:outline-none transition-all resize-none text-sm box-border"
                   placeholder="Tell us about your project..."
                 />
                 {errors.message && (
-                  <p className="mt-1 text-xs sm:text-sm text-red-400 flex items-center">
-                    <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                  <p className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+                    <AlertCircle className="w-4 h-4" />
                     {errors.message.message}
                   </p>
                 )}
@@ -428,16 +431,16 @@ export function Contact() {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-green-400 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-green-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                className="w-full bg-green-400 text-black px-6 py-3.5 rounded-lg font-semibold text-sm hover:bg-green-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>
-                    <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-black border-t-transparent rounded-full animate-spin" />
+                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin" />
                     <span>Sending...</span>
                   </>
                 ) : (
                   <>
-                    <Send className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <Send className="w-5 h-5" />
                     <span>Send Message</span>
                   </>
                 )}
@@ -448,12 +451,11 @@ export function Contact() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex items-start sm:items-center space-x-2 text-green-400 bg-green-400/10 border border-green-400/20 rounded-lg p-3 sm:p-4"
+                  className="flex items-start gap-2 text-green-400 bg-green-400/10 border border-green-400/20 rounded-lg p-4 text-sm"
                 >
-                  <CheckCircle className="w-5 h-5" />
+                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
                   <span>
-                    Message sent successfully to khadeejaasif323@gmail.com!
-                    We'll get back to you soon.
+                    Message sent successfully! We'll get back to you soon.
                   </span>
                 </motion.div>
               )}
@@ -462,12 +464,10 @@ export function Contact() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex items-start sm:items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3 sm:p-4"
+                  className="flex items-start gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4 text-sm"
                 >
-                  <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-0" />
-                  <span className="text-sm sm:text-base">
-                    Something went wrong. Please try again.
-                  </span>
+                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  <span>Something went wrong. Please try again.</span>
                 </motion.div>
               )}
             </form>
